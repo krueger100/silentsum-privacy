@@ -6,7 +6,7 @@
     <title>SilentSum — Privacy Policy</title>
     <meta
       name="description"
-      content="Privacy policy for SilentSum, an Android calculator with an encrypted private vault."
+      content="Privacy policy for SilentSum, a calculator for Android and iOS with an encrypted private vault."
     />
     <style>
       :root {
@@ -129,9 +129,10 @@
     <main>
       <h1>SilentSum — Privacy Policy</h1>
       <p class="sub">
-        Last updated 27 September 2026. Applies to the Android application <strong>SilentSum</strong>,
-        published on Google Play under the name <strong>Calculator</strong>, package
-        <code>com.kruegerco.silentsum</code>.
+        Last updated 27 September 2026. Applies to the <strong>SilentSum</strong> application for
+        Android and iOS, distributed under the name <strong>Calculator</strong>, with the
+        application ID and bundle identifier <code>com.kruegerco.silentsum</code>. It covers both
+        platforms; where they differ, the difference is stated.
       </p>
 
       <p>
@@ -152,8 +153,8 @@
       <ul>
         <li>
           <strong>Your PIN.</strong> It is never transmitted and never stored in a readable form. A
-          key is derived from it with Argon2id and kept in the operating system's secure key store.
-          If you forget it, we cannot recover it for you.
+          key is derived from it with Argon2id and kept in the operating system's secure key store —
+          the Android Keystore, or the iOS Keychain. If you forget it, we cannot recover it for you.
         </li>
         <li>
           <strong>Vault contents.</strong> Photos and videos you add are encrypted on the device with
@@ -246,8 +247,9 @@
       <ul>
         <li>Your location.</li>
         <li>Your contacts, calendar, call log or messages from other apps.</li>
-        <li>Any advertising identifier. The app requests none, and the advertising-ID permission is
-          explicitly removed from it.</li>
+        <li>Any advertising identifier. The app requests none: on Android the advertising-ID
+          permission is explicitly removed from it, and on iOS no tracking authorisation is ever
+          requested, so the IDFA is never available to the app.</li>
         <li>The contents of your vault, your messages, or your PIN — these are encrypted before they
           leave the device and we hold no key.</li>
       </ul>
@@ -261,11 +263,16 @@
           crash reports. Nothing on the unlock or vault path uses it.</li>
         <li><strong>Screenshot detection</strong> — required by the component that prevents the
           vault from appearing in screenshots and screen recordings. It only allows the app to be
-          told that a screenshot happened; it grants no access to screen contents.</li>
+          told that a screenshot happened; it grants no access to screen contents. Blocking works on
+          Android, and on iOS 13 and later; on older iOS the vault is hidden behind a curtain
+          whenever the app leaves the foreground, so it stays out of the app switcher.</li>
+        <li><strong>Photo library</strong> (iOS only) — asked for the first time you import an
+          existing picture. Android needs no such permission, because importing there goes through
+          the system photo picker, which hands over only what you chose.</li>
       </ul>
       <p>
-        Importing from your gallery uses the Android system photo picker, so the app never needs
-        permission to read your photo library. Only the items you pick are copied in.
+        Either way, only the items you pick are copied in, and the originals in your library are
+        never modified, moved or deleted.
       </p>
 
       <h2 id="retention">How long data is kept</h2>
@@ -377,8 +384,8 @@
       </p>
 
       <footer>
-        SilentSum, published on Google Play as “Calculator”. Package
-        <code>com.kruegerco.silentsum</code>.
+        SilentSum, distributed as “Calculator” for Android and iOS. Application ID and bundle
+        identifier <code>com.kruegerco.silentsum</code>.
       </footer>
     </main>
   </body>
