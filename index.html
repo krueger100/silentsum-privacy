@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SilentSum — Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy policy for SilentSum, an Android calculator with an encrypted private vault."
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --surface: #f6f7f9;
+        --text: #17202a;
+        --muted: #5a6572;
+        --border: #dfe3e8;
+        --accent: #3d5afe;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111827;
+          --surface: #1f2937;
+          --text: #f9fafb;
+          --muted: #9aa4b2;
+          --border: #374151;
+          --accent: #8da2ff;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          16px/1.65 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      main {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 3rem 1rem 5rem;
+      }
+      h1 {
+        font-size: 1.9rem;
+        line-height: 1.25;
+        margin: 0 0 0.35rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin: 2.5rem 0 0.6rem;
+        padding-top: 0.6rem;
+        border-top: 1px solid var(--border);
+      }
+      h3 {
+        font-size: 1rem;
+        margin: 1.5rem 0 0.4rem;
+      }
+      .sub {
+        color: var(--muted);
+        margin: 0 0 2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.94rem;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.6rem 0.7rem;
+        border-bottom: 1px solid var(--border);
+      }
+      th {
+        background: var(--surface);
+        font-weight: 600;
+      }
+      code {
+        background: var(--surface);
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      a {
+        color: var(--accent);
+      }
+      .callout {
+        background: var(--surface);
+        border-left: 3px solid var(--accent);
+        padding: 0.9rem 1rem;
+        margin: 1.2rem 0;
+        border-radius: 0 6px 6px 0;
+      }
+      ul {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin: 0.35rem 0;
+      }
+      footer {
+        margin-top: 3rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      @media (max-width: 34rem) {
+        main {
+          padding: 2rem 1rem 4rem;
+        }
+        table,
+        th,
+        td {
+          font-size: 0.88rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>SilentSum — Privacy Policy</h1>
+      <p class="sub">
+        Last updated 27 September 2026. Applies to the Android application <strong>SilentSum</strong>,
+        published on Google Play under the name <strong>Calculator</strong>, package
+        <code>com.kruegerco.silentsum</code>.
+      </p>
+
+      <p>
+        SilentSum is a working calculator that also holds a private, PIN-protected vault for photos
+        and videos. This policy describes exactly what the app collects, where it goes, who else can
+        see it, and how to get rid of it.
+      </p>
+
+      <div class="callout">
+        <strong>The short version.</strong> The vault works entirely on your device and needs no
+        account. Photos, videos and messages are encrypted on the device before anything leaves it,
+        and we cannot read them — not in backups, not in transit, not on our servers. Nothing is
+        uploaded unless you turn on cloud backup or send a message. There is no advertising, no
+        advertising identifier, no location collection and no sale of data.
+      </div>
+
+      <h2 id="on-device">What stays on your device</h2>
+      <ul>
+        <li>
+          <strong>Your PIN.</strong> It is never transmitted and never stored in a readable form. A
+          key is derived from it with Argon2id and kept in the operating system's secure key store.
+          If you forget it, we cannot recover it for you.
+        </li>
+        <li>
+          <strong>Vault contents.</strong> Photos and videos you add are encrypted on the device with
+          XChaCha20-Poly1305 and stored in the app's private storage. They are never written to your
+          gallery or to shared storage, so they do not appear in other apps.
+        </li>
+        <li>
+          <strong>Calculator use.</strong> Calculations are not recorded or transmitted.
+        </li>
+      </ul>
+      <p>
+        Unlocking the vault contacts no server. It works with the device offline and in airplane
+        mode.
+      </p>
+
+      <h2 id="collected">What leaves your device, and only when you choose</h2>
+
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>When</th>
+          <th>Why</th>
+          <th>Who can read it</th>
+        </tr>
+        <tr>
+          <td>Email address and password</td>
+          <td>Only if you create a backup account</td>
+          <td>To identify your account and your backup</td>
+          <td>Us and Google (Firebase Authentication). The password is handled by Firebase and is
+            not visible to us.</td>
+        </tr>
+        <tr>
+          <td>Encrypted vault backup</td>
+          <td>Only if you turn on cloud backup</td>
+          <td>So you can restore your vault on a new device</td>
+          <td><strong>Nobody but you.</strong> It is encrypted on your device first; we store
+            ciphertext and hold no key to it.</td>
+        </tr>
+        <tr>
+          <td>Messages and their attachments</td>
+          <td>Only if you send a message to another user</td>
+          <td>To deliver it</td>
+          <td><strong>You and the recipient only.</strong> End-to-end encrypted; we store ciphertext
+            and cannot read it.</td>
+        </tr>
+        <tr>
+          <td>Your email address, looked up as an account id</td>
+          <td>When you or another user starts a conversation</td>
+          <td>So people who know your address can reach you</td>
+          <td>Us, and the user who looked you up. Rate limited.</td>
+        </tr>
+        <tr>
+          <td>Crash reports</td>
+          <td>On by default; you can switch it off in Settings</td>
+          <td>To find and fix crashes</td>
+          <td>Us and Google (Firebase Crashlytics). Filenames, paths and anything PIN-shaped are
+            removed before sending.</td>
+        </tr>
+        <tr>
+          <td>Anonymous usage events</td>
+          <td><strong>Off by default</strong>; only if you switch it on in Settings</td>
+          <td>To see which features are used</td>
+          <td>Us and Google (Firebase Analytics). Event names only, no vault content.</td>
+        </tr>
+        <tr>
+          <td>Device integrity check</td>
+          <td>When the app contacts our servers</td>
+          <td>To confirm requests come from a genuine copy of the app, not a script</td>
+          <td>Google (Play Integrity / Firebase App Check). It attests the app, not you.</td>
+        </tr>
+        <tr>
+          <td>Support messages</td>
+          <td>Only when you press Send on the support form</td>
+          <td>To answer you</td>
+          <td>Us, and Resend (our email provider). Includes what you wrote, optionally a reply
+            address, and optionally the diagnostics shown to you on screen beforehand. Anything
+            PIN-shaped is removed first.</td>
+        </tr>
+        <tr>
+          <td>Payment details</td>
+          <td>Only if you buy SilentSum Pro or Cloud</td>
+          <td>To take payment</td>
+          <td><strong>PayMongo only.</strong> Payment happens on PayMongo's own hosted page. The app
+            never sees or stores your card or wallet details. We receive only whether a payment
+            succeeded.</td>
+        </tr>
+      </table>
+
+      <h2 id="not-collected">What we never collect</h2>
+      <ul>
+        <li>Your location.</li>
+        <li>Your contacts, calendar, call log or messages from other apps.</li>
+        <li>Any advertising identifier. The app requests none, and the advertising-ID permission is
+          explicitly removed from it.</li>
+        <li>The contents of your vault, your messages, or your PIN — these are encrypted before they
+          leave the device and we hold no key.</li>
+      </ul>
+      <p>There is no advertising in the app, and we do not sell or rent data to anyone.</p>
+
+      <h2 id="permissions">Permissions the app asks for</h2>
+      <ul>
+        <li><strong>Camera</strong> — to take photos and videos directly into the vault. Recordings
+          are silent; the app does not request microphone access.</li>
+        <li><strong>Internet</strong> — for optional cloud backup, messaging, purchases, support and
+          crash reports. Nothing on the unlock or vault path uses it.</li>
+        <li><strong>Screenshot detection</strong> — required by the component that prevents the
+          vault from appearing in screenshots and screen recordings. It only allows the app to be
+          told that a screenshot happened; it grants no access to screen contents.</li>
+      </ul>
+      <p>
+        Importing from your gallery uses the Android system photo picker, so the app never needs
+        permission to read your photo library. Only the items you pick are copied in.
+      </p>
+
+      <h2 id="retention">How long data is kept</h2>
+      <ul>
+        <li><strong>On your device</strong> — until you delete the item or the app.</li>
+        <li><strong>Cloud backup</strong> — until you delete it or delete your account.</li>
+        <li><strong>Messages and attachments</strong> — until deleted. Automatic expiry of message
+          attachments is being introduced; until it is in force, attachments are retained until
+          removed.</li>
+        <li><strong>Crash reports and usage events</strong> — per Google's Firebase retention
+          periods.</li>
+        <li><strong>Support email</strong> — kept in our support inbox so we can follow up.</li>
+      </ul>
+
+      <h2 id="delete">Deleting your data</h2>
+      <p>
+        You can delete everything without contacting us, and without needing this page.
+      </p>
+      <h3>In the app</h3>
+      <ul>
+        <li><strong>Vault items</strong> — delete them in the gallery. Deletion is immediate and
+          local.</li>
+        <li><strong>Cloud backup</strong> — Settings → Cloud backup → delete the backup. This removes
+          the encrypted blobs and the backup record from our servers.</li>
+        <li><strong>Your whole account</strong> — Settings → Cloud backup → <strong>Delete
+            account</strong>. This deletes your account credential together with your backup data,
+          entitlements and support thread.</li>
+        <li><strong>Everything on the device</strong> — uninstalling the app removes the vault and its
+          keys. Because the encryption key lives in the device's secure store and is excluded from
+          operating-system backups, an uninstall makes local vault data unrecoverable.</li>
+      </ul>
+      <h3>By email</h3>
+      <p>
+        If you cannot reach the in-app option — for example you have forgotten your PIN — email
+        <a href="mailto:kruegercolabs@gmail.com">kruegercolabs@gmail.com</a> from the address on the
+        account and ask for deletion. We will delete the account and its data and confirm when it is
+        done. Please allow up to 30 days.
+      </p>
+      <p>
+        Note that we cannot decrypt your vault for you, and deleting an account does not recover its
+        contents.
+      </p>
+
+      <h2 id="security">How it is protected</h2>
+      <ul>
+        <li>Keys are derived from your PIN with <strong>Argon2id</strong> and separated with
+          <strong>HKDF</strong>.</li>
+        <li>Content is encrypted with <strong>XChaCha20-Poly1305</strong>, which authenticates as
+          well as encrypts, so tampering is detected rather than decrypted.</li>
+        <li>Encryption happens on the device before upload. Our servers hold ciphertext.</li>
+        <li>Server access is restricted by per-account security rules, and requests are attested
+          with Play Integrity.</li>
+        <li>The vault's screens are marked secure, so they are excluded from screenshots, screen
+          recordings and the recent-apps preview.</li>
+      </ul>
+      <div class="callout">
+        No system is perfect. Encryption protects data at rest and in transit; it cannot protect you
+        from someone who knows your PIN, or from malicious software running on your device with
+        elevated privileges.
+      </div>
+
+      <h2 id="children">Children</h2>
+      <p>
+        SilentSum is not directed at children and is not designed for use by anyone under 13 (or the
+        minimum age of digital consent where you live). We do not knowingly collect data from
+        children. If you believe a child has created an account, email us and we will delete it.
+      </p>
+
+      <h2 id="third-parties">Third parties we use</h2>
+      <ul>
+        <li><strong>Google</strong> (Firebase Authentication, Firestore, Cloud Storage, Cloud
+          Functions, Crashlytics, Analytics, App Check / Play Integrity) — accounts, encrypted
+          storage, crash reporting and abuse prevention.
+          <a href="https://firebase.google.com/support/privacy">Firebase privacy</a></li>
+        <li><strong>PayMongo</strong> — payment processing for purchases. Card and wallet details go
+          to PayMongo, never to us. <a href="https://www.paymongo.com/privacy">PayMongo privacy</a></li>
+        <li><strong>Resend</strong> — delivery of support email you choose to send.
+          <a href="https://resend.com/legal/privacy-policy">Resend privacy</a></li>
+      </ul>
+      <p>
+        These providers process data on our behalf under their own terms. We do not share your data
+        with anyone else, and we do not use it for advertising.
+      </p>
+
+      <h2 id="rights">Your rights</h2>
+      <p>
+        Depending on where you live, you may have the right to access, correct, export or delete the
+        data we hold about you, and to object to or restrict its processing. The in-app options above
+        cover access and deletion directly. For anything else, email
+        <a href="mailto:kruegercolabs@gmail.com">kruegercolabs@gmail.com</a> and we will respond
+        within 30 days.
+      </p>
+      <p>
+        We cannot export your vault in readable form, because we cannot decrypt it. You can restore
+        it to a device you control using your own PIN.
+      </p>
+
+      <h2 id="changes">Changes to this policy</h2>
+      <p>
+        If this policy changes in a way that affects what we collect or who we share it with, we will
+        update the date at the top and, where the change is significant, tell you in the app before it
+        takes effect.
+      </p>
+
+      <h2 id="contact">Contact</h2>
+      <p>
+        kruegerCo-labs —
+        <a href="mailto:kruegercolabs@gmail.com">kruegercolabs@gmail.com</a>
+      </p>
+
+      <footer>
+        SilentSum, published on Google Play as “Calculator”. Package
+        <code>com.kruegerco.silentsum</code>.
+      </footer>
+    </main>
+  </body>
+</html>
